@@ -1,8 +1,7 @@
 import { useSession, signIn } from 'next-auth/react';
+import { UserTable } from '../components/UserTable';
 
-import { Form } from '../components/Form';
-
-export default function Home() {
+export default function Table() {
 	const { data: session } = useSession();
 
 	const handleClick = (e) => {
@@ -23,5 +22,5 @@ export default function Home() {
 		);
 	}
 
-	return <Form session={session} />;
+	return <UserTable />;
 }
